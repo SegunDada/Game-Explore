@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: " https://api.mobygames.com/v1",
+  baseURL: "https://api.mobygames.com/v1",
   params: {
-    api_key: "moby_Z512XOnrBjMeuwKYDNTrKTa5yGE",
+    api_key: "moby_fjlQG9VZk1wWJ5hWZdTFPZLfSJe",
   },
 });
