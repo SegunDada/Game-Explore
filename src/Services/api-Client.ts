@@ -5,6 +5,6 @@ export default axios.create({
   params: {
     api_key: "moby_fjlQG9VZk1wWJ5hWZdTFPZLfSJe",
     limit: 20,
-    offset: 58,
+    offset: 30,
   },
 });
