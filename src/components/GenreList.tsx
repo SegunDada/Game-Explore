@@ -10,7 +10,7 @@ interface Props {
 }
 
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
-  const { genres, isLoading, error } = useGenre();
+  const { data, isLoading, error } = useGenre();
   const skeletons = _.range(50);
   if (error) return null;
   return (
@@ -18,7 +18,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
       {isLoading &&
         skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
       <List>
-        {genres.map((genre) => (
+        {data.map((genre) => (
           <ListItem key={genre.genre_id}>
             <HStack paddingY={2}>
               <Button
