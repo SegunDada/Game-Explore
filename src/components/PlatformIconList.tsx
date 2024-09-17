@@ -15,7 +15,13 @@ const PlatformIconList = ({ game }: Props) => {
     "Atari 8-bit": FaXbox,
   };
   //return <Text>{game.sample_cover.platforms}</Text>;
-  return <Icon as={iconMap[game.sample_cover.platforms]} color="gray.400" />;
+  return (
+    <Icon
+      key={game.sample_cover.platforms}
+      as={iconMap[game.sample_cover.platforms]}
+      color="gray.400"
+    />
+  );
 };
 
 export default PlatformIconList;

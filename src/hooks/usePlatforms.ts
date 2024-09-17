@@ -26,15 +26,12 @@ export interface GameCover {
   platforms: string;
   image: string;
 }
-interface FetchGamesResponse {
-  games: Game[];
+interface FetchPlatformsResponse {
+  platforms: Platforms[];
 }
 
-const useGames = (
-  selectedGenre: Genre | null,
-  requestConfig?: AxiosRequestConfig
-) => {
-  const [games, setGames] = useState<Game[]>([]);
+const usePlatforms = () => {
+  const [platforms, setPlatforms] = useState<Platforms[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
@@ -42,13 +39,11 @@ const useGames = (
 
     setLoading(true);
     apiClient
-      .get<FetchGamesResponse>("/games?format=normal", {
+      .get<FetchPlatformsResponse>("/platforms", {
         signal: controller.signal,
-        ...requestConfig,
-        params: { genres: selectedGenre?.genre_id },
       })
       .then((response) => {
-        setGames(response.data.games);
+        setPlatforms(response.data.platforms);
         setLoading(false);
       })
       .catch((err) => {
@@ -58,9 +53,9 @@ const useGames = (
       });
 
     return () => controller.abort();
-  }, [selectedGenre?.genre_id]);
+  }, []);
 
-  return { games, error, isLoading };
+  return { platforms, error, isLoading };
 };
 
-export default useGames;
+export default usePlatforms;

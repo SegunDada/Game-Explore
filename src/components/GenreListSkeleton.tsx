@@ -1,10 +1,12 @@
-import { Skeleton, SkeletonText } from "@chakra-ui/react";
+import { Box, Card, Skeleton, SkeletonText } from "@chakra-ui/react";
 
 const GenreListSkeleton = () => {
   return (
-    <Skeleton>
-      <SkeletonText />
-    </Skeleton>
+    <Card borderRadius={10} overflow="hidden">
+      <Skeleton>
+        <SkeletonText />
+      </Skeleton>
+    </Card>
   );
 };
 
