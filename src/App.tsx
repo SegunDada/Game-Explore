@@ -6,7 +6,7 @@ import GenreList from "./components/GenreList";
 import { Genre } from "./hooks/useGenre";
 import PlatformSelector from "./components/PlatformSelector";
 import { Game } from "./hooks/useGames";
-import SortSelector from "./components/sortSelector";
+import SortSelector from "./components/SortSelector";
 
 interface Props {
   game: Game;

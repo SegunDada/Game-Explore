@@ -8,13 +8,13 @@ const SortSelector = () => {
     { value: "2", label: "Name" },
     { value: "3", label: "Release data" },
     { value: "4", label: "Popularity" },
-    { value: "5", label: "Average rating" },
+    { value: "5", label: "Average  rating" },
   ];
 
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        Order by Relevance
+        Order by:
       </MenuButton>
       <MenuList>
         {sortOrders.map((order) => (
