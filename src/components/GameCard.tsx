@@ -17,24 +17,16 @@ interface Props {
 }
 
 const GameCard = ({ game }: Props) => {
-  const handleClick = ({ game }: Props) => {
-    //window.open(`${game.moby_url}`, "_blank");
-    console.log("Card clicked");
-  };
   return (
     <Link href={game.moby_url} isExternal target="_blank">
       <Card
         _hover={{ transform: "underline" }}
-        onClick={() => handleClick}
-        height="580px"
+        height="650px"
         width="350px"
         borderRadius={20}
         overflow="hidden"
       >
-        <Image
-          onClick={() => handleClick}
-          src={game.sample_cover.thumbnail_image}
-        />
+        <Image src={game.sample_cover.thumbnail_image} />
         <CardBody>
           <HStack justifyContent="space-between" marginBottom={3}>
             <PlatformIconList game={game} />
