@@ -8,14 +8,14 @@ interface Props {
 }
 const GameCard = ({ game }: Props) => {
   return (
-    <Card height="550px" width="300px" borderRadius={20} overflow="hidden">
+    <Card height="580px" width="350px" borderRadius={20} overflow="hidden">
       <Image src={game.sample_cover.thumbnail_image} />
       <CardBody>
-        <Heading fontSize="2xl">{game.title}</Heading>
-        <HStack justifyContent="space-between">
+        <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList game={game} />
           <Score moby_score={game.moby_score} />
         </HStack>
+        <Heading fontSize="2xl">{game.title}</Heading>
       </CardBody>
     </Card>
   );

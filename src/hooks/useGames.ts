@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import apiClient from "../Services/api-Client";
 import { AxiosRequestConfig, CanceledError } from "axios";
+import { StepIndicatorProps } from "@chakra-ui/react";
 
 export interface Game {
   game_id: number;
@@ -9,6 +10,7 @@ export interface Game {
   moby_score: number;
   genre: Genre;
   platforms: Platforms;
+  moby_url: string;
 }
 
 export interface Platforms {
