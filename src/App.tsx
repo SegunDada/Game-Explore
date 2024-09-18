@@ -10,16 +10,7 @@ import SortSelector from "./components/SortSelector";
 import { Platforms } from "./hooks/usePlatforms";
 import GameHeading from "./components/GameHeading";
 
-interface Props {
-  game: Game;
-  genre: Genre;
-}
-
-// export interface GameQuery {
-//   genre: Genre | null;
-//   platform: Platforms | null;
-// }
-function App({ game, genre }: Props) {
+function App() {
   //const [game, setGame] = useState<Game[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   return (
