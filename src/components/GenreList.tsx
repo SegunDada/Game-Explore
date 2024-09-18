@@ -1,4 +1,11 @@
-import { Button, HStack, List, ListItem, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Heading,
+  HStack,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import useGenre from "../hooks/useGenre";
 import GenreListSkeleton from "./GenreListSkeleton";
 import _ from "lodash";
@@ -17,12 +24,16 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
     <>
       {isLoading &&
         skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
+      <Heading fontSize="2xl" marginBottom={3}>
+        Genres
+      </Heading>
       <List>
         {data.map((genre) => (
           <ListItem key={genre.genre_id}>
             <HStack paddingY={2}>
               <Button
-                flexWrap={"wrap"}
+                whiteSpace="normal"
+                textAlign="left"
                 fontSize={"larger"}
                 variant="link"
                 onClick={() => onSelectGenre(genre)}
