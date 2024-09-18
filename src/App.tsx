@@ -15,12 +15,12 @@ interface Props {
   genre: Genre;
 }
 
-export interface GameQuery {
-  genre: Genre | null;
-  platform: Platforms | null;
-}
+// export interface GameQuery {
+//   genre: Genre | null;
+//   platform: Platforms | null;
+// }
 function App({ game, genre }: Props) {
-  //const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  //const [game, setGame] = useState<Game[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   return (
     <Grid
