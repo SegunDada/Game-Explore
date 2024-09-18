@@ -21,10 +21,9 @@ const GameCard = ({ game }: Props) => {
     <Link href={game.moby_url} isExternal target="_blank">
       <Card
         _hover={{ transform: "underline" }}
-        height="650px"
-        width="350px"
         borderRadius={20}
         overflow="hidden"
+        padding={3}
       >
         <Image src={game.sample_cover.thumbnail_image} />
         <CardBody>
